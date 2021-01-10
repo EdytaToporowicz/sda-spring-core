@@ -1,13 +1,11 @@
 package pl.sda.livecodingspringcore;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import pl.sda.livecodingspringcore.service.BlogPostService;
 
 @SpringBootApplication
-@Slf4j  //private static final Logger log = org.slf4j.LoggerFactory.getLogger(LiveCodingSpringCoreApplication.class);
+//@Slf4j  //private static final Logger log = org.slf4j.LoggerFactory.getLogger(LiveCodingSpringCoreApplication.class);
 //zamiast 'sout' = log.info lub
 public class LiveCodingSpringCoreApplication {
 
@@ -16,7 +14,7 @@ public class LiveCodingSpringCoreApplication {
 
 //spr
         ConfigurableApplicationContext applicationContext = SpringApplication.run(LiveCodingSpringCoreApplication.class, args); //zad 3 - drugi sposób
-        BlogPostService blogPostService = applicationContext.getBean(BlogPostService.class);    //wyciągamy beana BlogPostService, zamiast new.....
+//        BlogPostService blogPostService = applicationContext.getBean(BlogPostService.class);    //wyciągamy beana BlogPostService, zamiast new.....
 
 
 //        BlogPostService blogPostService = new BlogPostService(new BlogPostRepository());
