@@ -10,7 +10,7 @@ import pl.sda.livecodingspringcore.service.BlogPostService;
 @Slf4j
 public class CommandLinePrinter implements CommandLineRunner {
 
-    private BlogPostService blogPostService;
+    private final BlogPostService blogPostService;
 
     public CommandLinePrinter(BlogPostService blogPostService) {
         this.blogPostService = blogPostService;
@@ -19,7 +19,7 @@ public class CommandLinePrinter implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         blogPostService.save(new BlogPost(1, "tytuł pierwszy", "content pierwszy"));
-        blogPostService.save(new BlogPost(2, "tytuł drugi", "content drugi"));
+        blogPostService.save(new BlogPost(2, "      tytuł         drugi          ", "content drugi"));
 
         log.info("BlogPost o id 2: " + blogPostService.findById(2));
     }

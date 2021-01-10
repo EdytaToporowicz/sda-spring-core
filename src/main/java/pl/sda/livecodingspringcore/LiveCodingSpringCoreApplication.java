@@ -14,14 +14,14 @@ public class LiveCodingSpringCoreApplication {
     public static void main(String[] args) {
         // SpringApplication.run(LiveCodingSpringCoreApplication.class, args);      //zad 2 - pierwszy sposób=cała metoda main
 
-
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(LiveCodingSpringCoreApplication.class, args); //zad 3
+//sprawdz!
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(LiveCodingSpringCoreApplication.class, args); //zad 3 - drugi sposób
         BlogPostService blogPostService = applicationContext.getBean(BlogPostService.class);    //wyciągamy beana BlogPostService, zamiast new.....
 
 
 //        BlogPostService blogPostService = new BlogPostService(new BlogPostRepository());
 
-//        blogPostService.save(new BlogPost(1, "tytuł pierwszy", "content pierwszy"));
+//        blogPostService.save(new BlogPost(1, "tytuł pierwszy", "content pierwszy"));  //trzeci sposób - patrz klasa Command.... przeniesiono kod
 //        blogPostService.save(new BlogPost(2, "tytuł drugi", "content drugi"));
 //
 //        log.info("BlogPost o id 2: " + blogPostService.findById(2));
