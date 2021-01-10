@@ -14,7 +14,7 @@ public class LiveCodingSpringCoreApplication {
     public static void main(String[] args) {
         // SpringApplication.run(LiveCodingSpringCoreApplication.class, args);      //zad 2 - pierwszy sposób=cała metoda main
 
-//sprawdz!
+//spr
         ConfigurableApplicationContext applicationContext = SpringApplication.run(LiveCodingSpringCoreApplication.class, args); //zad 3 - drugi sposób
         BlogPostService blogPostService = applicationContext.getBean(BlogPostService.class);    //wyciągamy beana BlogPostService, zamiast new.....
 

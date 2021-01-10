@@ -11,8 +11,8 @@ public class BlogPostService {
 
     // @Autowired  //wstrzykiwanie przez POLE
     // private BlogPostRepository blogPostRepository;
-    private final DataRepository<BlogPost> dataRepository;  //zad 4
-    private final StringDecorator stringDecorator;  //zad 5
+    private  DataRepository<BlogPost> dataRepository;  //zad 4
+    private  StringDecorator stringDecorator;  //zad 5
 
 
     public BlogPostService(final DataRepository dataRepository,@Qualifier("uppercaseDecorator") final StringDecorator stringDecorator) { //zad 4 //zad 5
