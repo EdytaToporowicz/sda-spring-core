@@ -28,11 +28,12 @@ public class CommandLinePrinter implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         blogPostService.save(new BlogPost(1, "tytuł pierwszy", "zawartość pierwsza"));
-        blogPostService.save(new BlogPost(2, "      tytuł         drugi          ", "zawartość druga"));
+        blogPostService.save(new BlogPost(2, "      tytuł         drugi          ", "bomba -zawartość druga"));
         blogPostService.save(new BlogPost(3, "   jakiś trzeci tytuł posta    ", "trzecia zawartość posta"));    //zad 7
 
         log.info(greeting);
         log.info("BlogPost o id 1: " + jsonSerializer.serializeBlogPost(blogPostService.findById(1)));
+        log.info("BlogPost o id 2: " + jsonSerializer.serializeBlogPost(blogPostService.findById(2)));
         log.info("BlogPost o id 3: " + jsonSerializer.serializeBlogPost(blogPostService.findById(3)));  //zad 7
 
     }
