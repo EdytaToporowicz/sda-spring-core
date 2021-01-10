@@ -7,6 +7,7 @@ import pl.sda.livecodingspringcore.model.BlogPost;
 import pl.sda.livecodingspringcore.repository.DataRepository;
 
 @Component  //zad 3 - Spring wie że musi utworzyć instancję takiej klasy
+//@PropertySource("classpath: application.properties")    //nie jest konieczne
 public class BlogPostService {
 
     // @Autowired  //wstrzykiwanie przez POLE
@@ -15,12 +16,16 @@ public class BlogPostService {
     private StringDecorator stringDecorator;  //zad 5
     private TimestampProvider timestampProvider;    //zad 7 do wstawiania daty przed zapisem posta do bazy
 
-    public BlogPostService(DataRepository<BlogPost> dataRepository,  @Qualifier("uppercaseDecorator")StringDecorator stringDecorator, TimestampProvider timestampProvider) {
+
+    public BlogPostService(DataRepository<BlogPost> dataRepository,
+                           @Qualifier("uppercaseDecorator") StringDecorator stringDecorator,
+                           TimestampProvider timestampProvider
+                          ) {
         this.dataRepository = dataRepository;
         this.stringDecorator = stringDecorator;
         this.timestampProvider = timestampProvider;
-    }
 
+    }
 
     // @Autowired  //zad 3 -może być adnotacja, ale nie musi = wstrzykiwanie przez KONSTRUKTOR-PREFEROWANE
     //    public BlogPostService(BlogPostRepository blogPostRepository) {
@@ -38,6 +43,7 @@ public class BlogPostService {
                 .filter(blogPost -> blogPost.getId() == id)
                 .map(blogPost -> {          //zad 5
                     blogPost.setTitle(stringDecorator.decorate(blogPost.getTitle()));
+
                     return blogPost;
                 })
                 .findFirst()

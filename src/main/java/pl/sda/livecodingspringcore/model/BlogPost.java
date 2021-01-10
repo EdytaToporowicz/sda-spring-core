@@ -1,6 +1,5 @@
 package pl.sda.livecodingspringcore.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,8 +11,7 @@ public class BlogPost {
     private long id;
     private String title;
     private String content;
-    @JsonFormat(pattern = "yyy-MM-dd HH:mm:ss.SSS")
-    private String created;
+        private String created;
 
     public BlogPost(long id, String title, String content) {
         this.id = id;
