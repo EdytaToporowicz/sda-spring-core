@@ -2,7 +2,6 @@ package pl.sda.livecodingspringcore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 //@Slf4j  //private static final Logger log = org.slf4j.LoggerFactory.getLogger(LiveCodingSpringCoreApplication.class);
@@ -10,10 +9,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class LiveCodingSpringCoreApplication {
 
     public static void main(String[] args) {
-        // SpringApplication.run(LiveCodingSpringCoreApplication.class, args);      //zad 2 - pierwszy sposób=cała metoda main
+         SpringApplication.run(LiveCodingSpringCoreApplication.class, args);      //zad 2 - pierwszy sposób=cała metoda main
 
-//spr
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(LiveCodingSpringCoreApplication.class, args); //zad 3 - drugi sposób
+
+//        ConfigurableApplicationContext applicationContext = SpringApplication.run(LiveCodingSpringCoreApplication.class, args); //zad 3 - drugi sposób
 //        BlogPostService blogPostService = applicationContext.getBean(BlogPostService.class);    //wyciągamy beana BlogPostService, zamiast new.....
 
 
