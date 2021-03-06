@@ -11,8 +11,8 @@ import java.util.List;
 @Component  //zad 3 - Spring wie że musi utworzyć instancję takiej klasy
 public class BlogPostRepository implements DataRepository<BlogPost> {
 
-    private  List<BlogPost> blogPosts = new ArrayList<>();   //udaje bazę danych
-    private  StringDecorator stringDecorator;
+    private List<BlogPost> blogPosts = new ArrayList<>();   //udaje bazę danych
+    private StringDecorator stringDecorator;
 
     public BlogPostRepository(@Qualifier("spaceRemovingDecorator") StringDecorator stringDecorator) {
         this.stringDecorator = stringDecorator;

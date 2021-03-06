@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LiveCodingSpringCoreApplication {
 
     public static void main(String[] args) {
-         SpringApplication.run(LiveCodingSpringCoreApplication.class, args);      //zad 2 - pierwszy sposób=cała metoda main
+        SpringApplication.run(LiveCodingSpringCoreApplication.class, args);      //zad 2 - pierwszy sposób=cała metoda main
 
 
 //        ConfigurableApplicationContext applicationContext = SpringApplication.run(LiveCodingSpringCoreApplication.class, args); //zad 3 - drugi sposób

@@ -11,7 +11,7 @@ public class BlogPost {
     private long id;
     private String title;
     private String content;
-        private String created;
+    private String created;
 
     public BlogPost(long id, String title, String content) {
         this.id = id;

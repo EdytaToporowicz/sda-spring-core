@@ -45,21 +45,21 @@ public class BlogPostService {
         }
     }
 
-        public BlogPost findById ( long id){
-            return dataRepository.findAll().stream()
-                    .filter(blogPost -> blogPost.getId() == id)
-                    .map(blogPost -> {          //zad 5
-                        blogPost.setTitle(stringDecorator.decorate(blogPost.getTitle()));
+    public BlogPost findById(long id) {
+        return dataRepository.findAll().stream()
+                .filter(blogPost -> blogPost.getId() == id)
+                .map(blogPost -> {          //zad 5
+                    blogPost.setTitle(stringDecorator.decorate(blogPost.getTitle()));
 
-                        return blogPost;
-                    })
-                    .findFirst()
-                    .orElse(new BlogPost(-1, "brak tytułu", "brak zawartości", timestampProvider.getCreated()));
-        }
+                    return blogPost;
+                })
+                .findFirst()
+                .orElse(new BlogPost(-1, "brak tytułu", "brak zawartości", timestampProvider.getCreated()));
+    }
 
 
-        // @Autowired   // wstrzykiwanie przez SETTER
+    // @Autowired   // wstrzykiwanie przez SETTER
 //    public void setBlogPostRepository(BlogPostRepository blogPostRepository) {
 //        this.dataRepository = blogPostRepository;
 //    }
-    }
+}

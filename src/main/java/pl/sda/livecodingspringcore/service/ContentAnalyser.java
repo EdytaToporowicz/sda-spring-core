@@ -19,7 +19,7 @@ public class ContentAnalyser {
         String[] split = content.split("\\s+");
         List<String> contentAsWords = Arrays.asList(split);
         if (!contentAsWords.isEmpty()) {
-           return forbiddenWords.stream().anyMatch(forbidddenWord -> contentAsWords.stream().map(s -> s.toLowerCase()).anyMatch(word -> word.equalsIgnoreCase(forbidddenWord)));
+            return forbiddenWords.stream().anyMatch(forbidddenWord -> contentAsWords.stream().map(s -> s.toLowerCase()).anyMatch(word -> word.equalsIgnoreCase(forbidddenWord)));
         }
         return false;
     }
